@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Portfolio</title>
+  <link rel="icon" type="image/png" href="image\logo1.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.85), rgba(255,0,0,0.3)), url('image/pupbg1.jpg') no-repeat center center/cover;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px 10px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #fff;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .back-button {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff0000, #8b0000);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    
+    }
+
+    .back-button:hover {
+      background: linear-gradient(90deg, #ff0000, #8b0000);
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    width: 140px;
+    height: 240px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between; 
+    transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .profile-img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ffffffbb;
+      margin: 0 auto;
+    }
+
+    .name {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.95em;
+    color: #fff;
+    min-height: 36px; 
+    }
+
+
+    .portfolio-link {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 6px 10px;
+      background: linear-gradient(90deg, #ff0000, #8b0000);
+      color: white;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      
+    }
+
+    .portfolio-link:hover {
+      background: darkred;
+    }
+    footer {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      font-size: 0.85rem;
+      opacity: 0.8;
+      padding: 20px 10px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .card {
+        width: 100px;
+        padding: 10px;
+      }
+
+      .profile-img {
+        width: 70px;
+        height: 70px;
+      }
+
+      .name {
+        font-size: 0.85em;
+      }
+
+      .portfolio-link {
+        font-size: 10px;
+        padding: 4px 8px;
+      }
+            footer {
+        font-size: 0.75rem;
+        padding: 15px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Virtual Portfolio</h1>
+    <a href="index.html" class="back-button">Home</a>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage1.jpg" alt="Student 1">
+      <div class="name">Abedes, Hanna Fe</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1DTvK-CJt7yoHhgdZjK4tSpr9y-XsuTsn?usp=drive_link" target="_blank">View Portfolio</a>
+    </div>
+
+    <div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Alarcon, Jan Ramil Elizer</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1MG18umAGLqpz1IA0wjlgq1HtcxqcBBtG?usp=sharing" target="_blank">View Portfolio</a>
+    </div>
+
+    <div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Aldaya, Charlene</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1OSpYOXZM1BlFTuFEb5nPM9HRRBvmbpT9?usp=sharing" target="_blank">View Portfolio</a>
+    </div>
+
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Amande, Sandrew</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1mcgl0mpBmN_3r-sXjvXomL70J2wjn60r?usp=drive_link" target="_blank">View Portfolio</a>
+    </div>
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Apostol, Ma. Rachel</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1y_C2le8KUav6JCvObd-IaeayKOwjm2Lo?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Arbis, Jefferson</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1hVUkfdsuCvseohVH4e9weKTmLP8lAVPf?usp=drive_link" target="_blank">View Portfolio</a>
+    </div>
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Arenas, Chryss D.</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1Enbauamq6QZJrNJYlEvQpDa2gSGN3yXy?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Ballori, Ethan Luis</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1ntqucfXtVyVNFIDPGzLrgJDPio22xXmV?usp=drive_link" target="_blank">View Portfolio</a>
+    </div>
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Beton, Julian</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1pX78iva9tYo9Z9Qe2e1zzGqUOxBaZopU?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Buno, Jhobert</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1MCliA9VAduQvbp5B_Co8NDLIiNpso-SH?usp=drive_link" target="_blank">View Portfolio</a>
+    </div>
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Cahayon, Joneth Joy</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1eTMds2iMxB7a1FX6cjaEUzcfVXk57ME2?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Calmateo, Alyssa</div>
+      <a class="portfolio-link" href="hhttps://drive.google.com/drive/folders/1x8mr90jgkAEPKoizyCHgMOHYa5IIYa2B?usp=drive_link" target="_blank">View Portfolio</a>
+    </div>
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Cañaveral, Jheawel Mae</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1yhylMvcd78Bz6xuf9xUzHr3ctOlHPB1_?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Capitle, Wendy Ann</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1WGXGG851253xdZMjKy1XaUh7S2Si-xzc?usp=drive_link" target="_blank">View Portfolio</a>
+    </div>
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Castillo, Manuel Alfonso</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1_FE40mAlTZM4KA7UBf17zZSs-8k6_RN0?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+    <div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Cepillo, Ceianreigh Keann</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/13gP1N_TSO-LL2yLGU8kpTe3Vyb9zCF6z" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Cervantes, Rain Andrea</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1LP2_VEeDJsBo4esj94pRVKpyOHOsynno?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Deciembre, Sarah Shumelle </div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1eHAXjnYSLWkQbynLEYl5B2EEITdE48mQ?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name"> Fabregas, Uella Blainne</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/10w0jQVwBbuFj_x6nVUqJRvXBtYuJDM_N?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Falcutila, Recthmon</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1EP10xTbhI_RcCaJbn90HSJCQd1l5_EP2?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Flores, Kaizen John</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1N7xBQPNHQuIK3M9jz1TwRq8tlQ7bUoUO?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Gutierrez, Sophia Margarete</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1OXY2L1MaKQcJISach-lwwd_7FEWnIm4j?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Guzman, Reniel</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/19jFmeCE10C2xEvKzORO50gaWfeqXXnqg?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Hernandez, Dan Efraim</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/19Q-zlbMJEkJF6rSd4uNu-q_gfu_BjM1Y?usp=drive_link" target="_blank">View Portfolio</a>
+    </div>
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Ibones, Lawrence</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1pMWqQJpx4AUg-6lbxA5zpTJHH5oxa5yJ?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Javier, Marco Teodoro</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1sTmZF7APtwdIlQw9_ZEaqE-CAuctb9b3?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Lajom, Kharl Emmanuel</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/10q3r0Mmrv-A8dVeo-IOtFphV_c_Zb4Lw?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Magboo, Isabel</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/189BUfOO6sbxzF9kAtamGW8CWYjTPH-Kp?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Mateo, Rhyza Anne</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1KR-Z_1IgI9cJP0EjNSbPpcGgOOxBUiS7?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Mediavillo, Angela</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1A_dcQ9wtAGAMLw43CLNnpdigT5DU3yFH?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Melendres, Collette</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1w_8LBMeGx40PXfBSPstlcWLnm8jnfnQu?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Mirasol, Dianne Marie</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1MpJqaWGP_1OxsSxGWppZlNrR9r_ZC9AF?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Nava, Axel John</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1BcSAgz4UFl-lZ2XY_0zHPKuA7bM5KpdN?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Paguican, Alexa Jane</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1N0UO4p4tNCNkSPP7rbosyLxSBhznOmMh?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Paule, Carlo Roberto</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1upLoLLDFYEdihgYEAoXFVxlrxSTpL7dd?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Puno, James Russel</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/124m3EMjAvEmD7FKwKk2mEeX-eYCqfPQ4?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Redoquerio, Jossel</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1DhzLT4i3O0uCwwPelstSOVOfp1qwYjXE?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Resano, Chynna</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1dZg7xk2LpWcO6i3j6RCpATDoxsQNtPBJ?usp=drive_link" target="_blank">View Portfolio</a>
+    </div>
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Rivera, Ellaine Joyce</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1kwq98VmmDQbbBSsMYYMDuc4zolRiV7GA?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Ricamara, Jahren D.</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1j8tqLd_bsEE4GbWjvNy-3ys91VDSB0Uv?usp=drive_link" target="_blank">View Portfolio</a>
+    </div>
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Sabio, Rhy Rhone Jhette</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1Zk1XgbOzd_NEPM6jXY0s09xMQ7ps_l0b?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Sagum, Kristel Margarette</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1dPIL_RiYgYf5HOvSHQHbsP3vyzjX26fd?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Santos, Charlotte</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1fntO_sYD6C2cBK7qiU3aLGWZlHFWj5lO?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Sarmiento, Christine</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1NvZ_OK85kxR_JtDPwfLBEZdWQewWEyB5?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Soriano, Kristel Anne</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1OoRdD6_wvKI4KNzmtIC0RHuryegnQt1I?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Sta. Ana, Nicole Decemae</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1Rs9iubGRaNd8Sfy-gwRkg0N-oyJTMQdo?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Tamagos, Nicole Kaye</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1jzRB54qkhktIVA2AV9i4e8BApOFTSMTv?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Tayzon, Christian Kyle C.</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1i-omP44H4VNrCoTlG1oCzdHVvDHF23Ir?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Ubaldo, John David</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1ZcpHLEIwNMh7LiFT-YyvA-t-D2whNCGh?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Utayde, Xian Andrei</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/19cJPRMHDO5yumXlMkdNw5qLfxizHCxdP?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+<div class="card">
+      <img class="profile-img" src="https://i.imgur.com/yourImage2.jpg" alt="Student 2">
+      <div class="name">Velasco, John Michael Luis P.</div>
+      <a class="portfolio-link" href="https://drive.google.com/drive/folders/1G4OgqYuSRsozpGvy-_l96gX7svXvpvZr?usp=drive_link" target="_blank">View Portfolio</a>
+    </div> 
+    </div>
+  <footer>
+    <p>© 2025 Polytechnic University of the Philippines - Internship Portal</p>
+  </footer>
+ 
+
+</body>
+</html>

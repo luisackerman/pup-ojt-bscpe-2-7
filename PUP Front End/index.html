@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PUP Internship Upload</title>
+  <link rel="icon" type="image/png" href="image\logo1.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+  position: relative;
+  min-height: 100vh;
+  background: url('image/pupbg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: 1;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.7));
+  z-index: 0;
+  backdrop-filter: blur(5px);
+  pointer-events: none;
+}
+
+    .main-content {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 40px 30px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
+      color: white;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .logo-circle {
+      width: 100px;
+      height: 100px;
+      background: white;
+      border-radius: 50%;
+      margin: -80px auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 5px solid #c30000;
+      box-shadow: 0 0 15px #ff0000;
+    }
+
+    .logo-circle img {
+      width: 70px;
+      height: 70px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin: 15px 0 25px;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, #ff0000, #8b0000);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 20px;
+      width: 100%;
+      margin: 10px 0;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #ff4444, #b22222);
+      transform: scale(1.03);
+    }
+
+    ul {
+      text-align: left;
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin: 10px 0;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    ul li::before {
+      content: "🔴";
+      position: absolute;
+      left: 0;
+    }
+
+    footer {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      font-size: 0.85rem;
+      opacity: 0.8;
+      padding: 20px 10px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      flex-shrink: 0;
+    }
+    #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease-out forwards;
+  animation-delay: 2s; 
+}
+
+.logo-animation {
+  width: 700px;
+  height: 400px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+        margin-top: 40px;
+      }
+
+      .logo-circle {
+        width: 80px;
+        height: 80px;
+      }
+
+      .logo-circle img {
+        width: 90px;
+        height: 90px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .btn {
+        font-size: 0.95rem;
+        padding: 10px 16px;
+      }
+
+      footer {
+        font-size: 0.75rem;
+        padding: 15px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="preloader">
+  <img src="image\logo2.png" alt="Logo" class="logo-animation" />
+</div>
+
+  <div class="main-content">
+    <div class="container">
+      <div class="logo-circle">
+        <img src="image\logo1.png" alt="PUP Logo" />
+      </div>
+
+      <h2>Internship File Upload</h2>
+
+      <button class="btn" onclick="uploadFiles()">📤 Submit via Google Drive</button>
+      <button class="btn" onclick="viewFiles()">📁 View Submitted Files</button>
+      <button class="btn" onclick="viewProfile()">🗃️ View Virtual Portfolio</button>
+
+
+      <ul>
+        <li>Notarized Memorandum of Agreement (MOA)</li>
+        <li>Endorsement Letter</li>
+        <li>Internship Agreement</li>
+        <li>Consent Form</li>
+        <li>Comprehensive Resume/Profile</li>
+        <li>Daily Attendance Report (DTR) Duly Signed by the Training Supervisor,</li>
+        <li>Weekly Accomplishment/Progress Report/Learning Diary</li>
+        <li>Professional Readings (optional)</li>
+        <li>Certificates from Networking and Linkages participation such as local/national/international webinars/trainings/conferences (optional) </li>
+        <li>Evaluation Forms Accomplished by the Employer/Training Supervisor</li>
+        <li>Evaluation Form Accomplished by the Student-Intern (Student-Intern Evaluation of the Training Provided by the HTE)</li>
+        <li>Internship Experience Summary Report (overall review and analysis of internship experience in narrative form)</li>
+        <li>Photo Documentation of the Actual Training/Output</li>
+        <li>Certificate of Completion issued by the HTE</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Polytechnic University of the Philippines - Internship Portal</p>
+  </footer>
+
+  <script>
+    function uploadFiles() {
+      window.open("https://drive.google.com/drive/folders/1eApEdMZrRqDoVz-kmCZME1AjBlMnr-yP", "_blank");
+    }
+
+    function viewFiles() {
+      window.open("https://drive.google.com/drive/folders/1eApEdMZrRqDoVz-kmCZME1AjBlMnr-yP", "_blank");
+    }
+  function viewProfile() {
+    window.open("Internship.html", "_blank"); 
+  }
+
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 2500); 
+  });
+
+
+  </script>
+
+</body>
+</html>
